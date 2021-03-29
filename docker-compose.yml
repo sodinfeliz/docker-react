@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+     - "5010:3000"
+    expose:
+      - "5010"
+    volumes:
+      # - /app/node_modules
+      - .:/app
+    stdin_open: true
